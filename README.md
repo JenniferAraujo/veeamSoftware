@@ -1,5 +1,5 @@
 <H1 align="center">
-  Veeam Software
+  Test Task
 </H1>
 
 <p align="center">
@@ -15,7 +15,7 @@ Developed in Python, this program synchronizes two folders, source and replica, 
 
 The program is developed using Python's standard libraries and does not require any external dependencies. It can be run in any Python 3 environment.
 
-**Usage**
+**Step to reproduce**
 
 Run the program from the command line, providing the paths to the source folder, replica folder, log file, and synchronization interval (in seconds):
 
@@ -31,7 +31,7 @@ Example:
 * log_file: Path to the log file where synchronization operations will be recorded.
 * interval: Interval in seconds between each synchronization.
 
-## Running the Application
+## Running the Program
 
 Ensure the source and replica folders exist.
 Provide a valid path for the log file.
