@@ -6,7 +6,7 @@ import argparse
 import logging
 
 #Sets up logging configuration to output log messages to both a file and the console
-def setup_logging(log):
+def initialize_logging(log):
 	logging.basicConfig(filename=log, level=logging.INFO, format='%(asctime)s - %(message)s')
 	logging.getLogger().addHandler(logging.StreamHandler()) 
 
@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
 	try:
 		validation(args.source, args.replica, args.log, args.interval)
-		setup_logging(args.log)
+		initialize_logging(args.log)
 		synchronization(args.source, args.replica, args.interval)
 	except ValueError as e:
 		print(f"Error: {e}")
