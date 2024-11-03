@@ -22,7 +22,7 @@ Run the program from the command line, providing the paths to the source folder,
          $ .py <source_directory> <replica_directory> <log_file> <interval>
 Example:
 
-         $ ./synchronization /path/to/source /path/to/replica /path/to/log.txt 10
+         $ ./synchronization /path/to/source /path/to/replica /path/to/log.txt 60
 
 **Arguments:**
 
