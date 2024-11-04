@@ -32,7 +32,11 @@ def synchronization(source, replica, interval):
 			for file in files:
 				source_file = os.path.join(root, file)
 				replica_file = os.path.join(replica, os.path.relpath(root, source), file)
-				
+
+				replica_dir = os.path.dirname(replica_file)
+				if not os.path.exists(replica_dir):
+					os.makedirs(replica_dir)
+
 				#Copy or update files in the replica if they're new or modified
 				if not os.path.exists(replica_file) or \
 				   os.path.getmtime(source_file) > os.path.getmtime(replica_file):
